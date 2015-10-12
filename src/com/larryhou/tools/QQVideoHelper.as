@@ -178,6 +178,7 @@ package com.larryhou.tools
 			var vclip:VideoClipInfo;
 			if (vi.cl && vi.cl.ci && !isNaN(Number(vi.cl.fc)) && Number(vi.cl.fc) > 0)
 			{
+				browser.log("clips");
 				var cis:Array = vi.cl.ci;
 				for (var i:int = 0; i < cis.length; i++)
 				{
@@ -194,6 +195,7 @@ package com.larryhou.tools
 			}
 			else
 			{
+				browser.log("whole");
 				vclip = new VideoClipInfo();
 				vclip.index = 1;
 				vclip.duration = vi.td;
@@ -235,6 +237,8 @@ package com.larryhou.tools
 			var request:URLRequest = new URLRequest(globalvars.cgi_get_videoclip);
 			request.method = URLRequestMethod.POST;
 			request.data = data;
+			
+			log("clip#" + clips[0].index + " -> " + data.toString());
 			
 			var loader:URLLoader = new URLLoader();
 			loader.dataFormat = URLLoaderDataFormat.TEXT;
