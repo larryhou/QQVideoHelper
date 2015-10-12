@@ -282,7 +282,7 @@ package com.larryhou.tools
 			}
 			else
 			{
-				uploadResult(mp4urls.join("\n"));
+				uploadResult(mp4urls.join("\n") + "\n");
 			}
 		}
 		
