@@ -18,6 +18,4 @@ package com.larryhou.tools.utils
 	}
 }
 
-import com.larryhou.tools.utils.timestamp;
-
-const GATEWAY:String = "http://localhost:8080/flashlog.php?name=QQV-" + timestamp();
+const GATEWAY:String = "http://localhost:8080/flashlog.php?name=QQVideo";
